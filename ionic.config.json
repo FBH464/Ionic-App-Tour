@@ -1,0 +1,7 @@
+{
+  "name": "AmigoTours",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
