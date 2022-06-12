@@ -1,5 +1,5 @@
 {
-  "name": "AmigoTours",
+  "name": "amigotours",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -9,8 +9,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "npx compodoc -p tsconfig.doc.json"
   },
+  
   "private": true,
   "dependencies": {
     "@angular/common": "~13.2.2",
@@ -40,6 +42,7 @@
     "@angular/compiler-cli": "~13.2.2",
     "@angular/language-service": "~13.2.2",
     "@capacitor/cli": "3.4.3",
+    "@compodoc/compodoc": "^1.1.19",
     "@ionic/angular-toolkit": "^6.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
