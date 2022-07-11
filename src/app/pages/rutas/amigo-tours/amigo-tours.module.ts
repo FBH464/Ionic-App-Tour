@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PrincipalPageRoutingModule } from './principal-routing.module';
+import { AmigoToursPageRoutingModule } from './amigo-tours-routing.module';
 
-import { PrincipalPage } from './principal.page';
+import { AmigoToursPage } from './amigo-tours.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PrincipalPageRoutingModule
+    AmigoToursPageRoutingModule
   ],
-  declarations: [PrincipalPage]
+  declarations: [AmigoToursPage]
 })
-export class PrincipalPageModule {}
+export class AmigoToursPageModule {}

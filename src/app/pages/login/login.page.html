@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Inicio de sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <form (ngSubmit)="login()" [formGroup]="credentials">
+    <div class="input-group">
+      <ion-item>
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        <ion-label position="stacked">Usuario:</ion-label>
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Correo electronico es requerido</span>
+        <span *ngIf="email.errors?.email">Correo electronico es inválido</span>
+      </div>
+      <ion-item>
+        <ion-icon slot="start" name="lock-closed"></ion-icon>
+        <ion-label position="stacked">Contraseña:</ion-label>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Contraseña es requerido</span>
+        <span *ngIf="password.errors?.minlength">Contraseña debe tener 6 caracteres</span>
+      </div>
+    </div>
+
+    <ion-toolbar>
+      <ion-button type="submit" expand="block" [disabled]="!credentials.valid" color="success">Ingresar Sesión</ion-button>
+      <ion-title size="small">¿No tienes una cuenta?</ion-title>
+      <ion-button type="button" expand="click" fill="clear">Registrarse</ion-button>
+      <ion-button (click)="goToInicio()" expand="block" fill="outline">Recordarme más adelante</ion-button>
+    </ion-toolbar>
+    
+    <ion-button type="button" expand="block" color="tertiary">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Inicia sesión con Google
+    </ion-button>
+
+    <ion-buttons slot="secondary">
+      <ion-button fill="solid">
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        Contacto
+      </ion-button>
+      <ion-button fill="solid" color="secondary">
+        Ayuda
+        <ion-icon slot="end" name="help-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </form>
+
+</ion-content>

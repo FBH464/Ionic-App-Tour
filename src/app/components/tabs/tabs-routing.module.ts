@@ -4,7 +4,7 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
@@ -18,6 +18,10 @@ const routes: Routes = [
       {
         path: 'tab3',
         loadChildren: () => import('../Notificaciones/tab3.module').then(m => m.Tab3PageModule)
+      },
+      {
+        path: 'tab4',
+        loadChildren: () => import('../Usuario/usuario.module').then(m => m.UsuarioPageModule)
       },
       {
         path: '',
