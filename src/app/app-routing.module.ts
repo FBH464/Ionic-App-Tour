@@ -26,11 +26,6 @@ const routes: Routes = [
     canLoad: [IntroGuard, AutoLoginGuard] // Revisar si mostrar la introducción o reenviar 
   },
   {
-    path: 'usuario',
-    loadChildren: () => import('./components/Usuario/usuario.module').then( m => m.UsuarioPageModule),
-    canLoad: [AuthGuard]
-  },
-  {
     path: 'pueblos-magicos',
     loadChildren: () => import('./pages/rutas/pueblos-magicos/pueblos-magicos.module').then( m => m.PueblosMagicosPageModule),
     canLoad: [AuthGuard]

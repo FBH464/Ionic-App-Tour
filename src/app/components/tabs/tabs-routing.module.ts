@@ -21,7 +21,7 @@ const routes: Routes = [
       },
       {
         path: 'tab4',
-        loadChildren: () => import('../Usuario/usuario.module').then(m => m.UsuarioPageModule)
+        loadChildren: () => import('../Usuario/tab4.module').then(m => m. Tab4PageModule)
       },
       {
         path: '',

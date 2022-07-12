@@ -8,9 +8,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor = "let character of characters">
-      <ion-label>{{character.title}}</ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card *ngFor="let character of characters">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-label>{{character.title}}</ion-label>
+      </ion-card-title>
+      <ion-card-subtitle>
+        subtitle
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      content
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

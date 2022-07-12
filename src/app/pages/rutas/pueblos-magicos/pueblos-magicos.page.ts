@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { PostService } from 'src/app/posts/post.service';
 
 @Component({
   selector: 'app-pueblos-magicos',
@@ -8,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PueblosMagicosPage implements OnInit {
 
-  characters = []
+  characters: any = []
 
   constructor(
-    private http: HttpClient
+    private postService: PostService
   ) { }
 
   ngOnInit() {
-    this.http.get<any>('http://localhost:1337/api/posts')
-    .subscribe(res=> {
-      console.log(res)
-      this.characters = res.results
-    })
+    this.postService.getposts().subscribe(
+      (res) => {
+        this.characters = res;
+      }, (err) => console.log(err)
+    );
   }
 
 }
