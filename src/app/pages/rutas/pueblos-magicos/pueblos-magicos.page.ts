@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from 'src/app/posts/post.service';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-pueblos-magicos',
@@ -17,6 +17,7 @@ export class PueblosMagicosPage implements OnInit {
   ngOnInit() {
     this.postService.getposts().subscribe(
       (res) => {
+        console.log("res", res)
         this.characters = res;
       }, (err) => console.log(err)
     );
